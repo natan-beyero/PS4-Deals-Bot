@@ -1,5 +1,3 @@
-import time
-
 import requests
 from bs4 import BeautifulSoup
 import RedditBot as reddit
@@ -21,23 +19,14 @@ url = "https://www.reddit.com/user/PS4Deals_Bot/comments/t98jdf/test_02/"
 
 thing_id = url.split("/")[6]
 
-#comment = comments[0]
-
 global prev_comment
 prev_comment = None
 
 for comment in comments:
 
-    #lines = comment.split('\n')
-    #nonempty_lines = [line for line in lines if line.strip() != ""]
-    #nonempty_lines.remove("Here is a breakdown of the games that are on sale.")
-
     if prev_comment == None:
         prev_comment = reddit.post_comment_by_id(''.join(comment), reddit_object, thing_id)
     else:
         prev_comment = reddit.post_comment(''.join(comment), prev_comment)
-
-
-#all_text = html_soup.find('div', {'class': 'box no-top-border'})
 
 
