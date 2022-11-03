@@ -7,10 +7,10 @@ def authenticate():
 
     reddit = praw.Reddit(
         user_agent = user_agent,
-        client_id = '6CcXfaLenPVKah4IrKjYQQ',
-        client_secret = '5kjuloG4_3la8Hn0sP1TkdAkrRQ0rw',
+        client_id = '*************',
+        client_secret = '*****************',
         username = 'PS4Deals_Bot',
-        password = "ToServeByPostingDeals!"
+        password = "*******************"
     )
 
     return reddit
